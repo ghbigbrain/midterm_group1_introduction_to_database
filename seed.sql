@@ -253,10 +253,7 @@ WHERE NOT EXISTS (SELECT 1 FROM loans l
                   WHERE l.copy_id = c.copy_id
                     AND l.loan_date BETWEEN '2025-01-01' AND '2025-12-31');
 
--- =====================================================================
 -- 8. MINH HỌA INSERT VI PHẠM RÀNG BUỘC (để trong chú thích để file vẫn chạy được)
---    Bỏ dấu "-- " ở đầu dòng nếu muốn thử riêng từng câu.
--- =====================================================================
 
 -- (a) Trùng barcode -> vi phạm UNIQUE (lỗi 1062 Duplicate entry)
 -- INSERT INTO copies (copy_id, title, author, barcode, category_id)
